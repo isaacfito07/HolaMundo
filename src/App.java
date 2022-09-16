@@ -5,7 +5,6 @@ public class App {
         Scanner sc=new Scanner(System.in);
         String turno="X";
         int count=1;
-        String ganador="";
         String [][] arreglo = new String[3][3];
         
         while(count<=9){
@@ -20,12 +19,14 @@ public class App {
                 if(noOcupado(arreglo,i,k)){
                     arreglo[i][k]=turno;
                     if(ganadorX(arreglo)){
-                        count=9;
-                        ganador="Ganador es X";
+                        System.out.print("\n\n\n\n\n");
+                        System.out.println("***************************** El ganador es X *****************************");
+                        break;
                     }
-                    if(ganadorO(arreglo)){
-                        count=9;
-                        ganador="Ganador es O";
+                    if(ganadorO(arreglo)){                        
+                        System.out.print("\n\n\n\n\n");
+                        System.out.println("***************************** El ganador es O *****************************");
+                        break;
                     }
                     access=false;
                 }else{
@@ -34,6 +35,7 @@ public class App {
             }
 
             //Imprimir la tabla del gato
+            System.out.println("\n");
             for(int x=0; x<=2; x++){
                 for(int y=0; y<=2;y++){
                     System.out.println(arreglo[x][y]);
@@ -45,11 +47,13 @@ public class App {
             }else{
                 turno="X";
             }
+
+            if(count==9){
+                System.out.println("\nEMPATE");
+            }
             count++;
         }
-        System.out.print("\n\n\n\n\n");
-        System.out.println("***************************************************************************************");
-        
+
     }
     public static boolean noOcupado(String [][] arreglo,int i,int k){
         if(arreglo[i][k]==null){
