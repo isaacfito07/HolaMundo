@@ -6,9 +6,11 @@ public class App {
         String turno="X";
         int count=1;
         String [][] arreglo = new String[3][3];
-        
+        boolean access; //Variable para entrar a la condicional de espacios ocupados
+        boolean accessWin=false;//Variable para entrar a la condicon de ganador
+
         while(count<=9){
-            boolean access=true;
+            access=true;
             while(access){
                 System.out.println("\n\nEl turno es de '"+turno+"'");
                 System.out.print("Inserte i: ");
@@ -21,14 +23,14 @@ public class App {
                     if(ganadorX(arreglo)){
                         System.out.print("\n\n\n\n\n");
                         System.out.println("***************************** El ganador es X *****************************");
-                        break;
+                        accessWin=true;
                     }
                     if(ganadorO(arreglo)){                        
                         System.out.print("\n\n\n\n\n");
                         System.out.println("***************************** El ganador es O *****************************");
-                        break;
+                        accessWin=true;
                     }
-                    access=false;
+                access=false;
                 }else{
                     System.out.print("Espacio ocupado!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
                 }
@@ -38,8 +40,9 @@ public class App {
             System.out.println("\n");
             for(int x=0; x<=2; x++){
                 for(int y=0; y<=2;y++){
-                    System.out.println(arreglo[x][y]);
+                    System.out.print(arreglo[x][y]+" ");
                 }
+                System.out.println();
             }
 
             if(turno=="X"){
@@ -48,13 +51,17 @@ public class App {
                 turno="X";
             }
 
-            if(count==9){
+            if(count==9 && !accessWin){
                 System.out.println("\nEMPATE");
+            }
+            if (accessWin) {
+                break;
             }
             count++;
         }
-
+        System.out.println("\nGAME OVER");
     }
+
     public static boolean noOcupado(String [][] arreglo,int i,int k){
         if(arreglo[i][k]==null){
             return true;
