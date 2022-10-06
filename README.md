@@ -1,18 +1,19 @@
-## Getting Started
+## Para inicio
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Bienvenido a VS Code en mundo de Java. Aqui hay una guia de ayuda para iniciar a codificar en JAVA en tu Visual Studio Code.
 
-## Folder Structure
+## Estructura de Proyecto
 
-The workspace contains two folders by default, where:
+El espacio de trabajo contiene dos carpetas predeterminadas, en:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `src`: la carpeta con el codigo fuente
+- `lib`: carpeta con dependencias
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Mientras, la salida compilada de archivos será generada en la carpeta `bin` de forma predeterminada.
 
 > If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+> Si quieres configurar la estructura de las carpetas, abre `.vscode/settings.json` y actualiza tus configuraciones ahí.
 
 ## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Los `JAVA PROJECTS` tiene a sus disposicion tods sus dependencias. Para mas detalles [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
