@@ -9,6 +9,7 @@ public class App {
         boolean access; //Variable para entrar a la condicional de espacios ocupados
         boolean accessWin=false;//Variable para entrar a la condicon de ganador
 
+        //Modificacion
         while(count<=9){
             access=true;
             while(access){
